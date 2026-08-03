@@ -11,14 +11,14 @@ publish = false
 [dependencies]
 goblin.workspace = true
 hex.workspace = true
-pasol-parser-core = { path = "../parser-core" }
+pasol-parser-core = { path = "../parser-core", version = "0.1.0" }
 schemars.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 
 [dev-dependencies]
 criterion.workspace = true
-pasol-parser-sdk = { path = "../parser-sdk" }
+pasol-parser-sdk = { path = "../parser-sdk", version = "0.1.0" }
 
 [[bench]]
 name = "parse_pe"
