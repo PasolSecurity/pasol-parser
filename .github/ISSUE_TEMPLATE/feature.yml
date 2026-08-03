@@ -1,0 +1,12 @@
+name: Feature request
+description: Propose a parser or framework improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: Problem and proposed factual output }
+    validations: { required: true }
+  - type: textarea
+    id: security
+    attributes: { label: Security and compatibility considerations }
+    validations: { required: true }

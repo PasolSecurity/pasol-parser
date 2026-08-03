@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pasolsecurity.org/schemas/error-v1.schema.json",
+  "title": "Pasol error v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "error"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": { "enum": ["io", "unsupported", "malformed", "limit_exceeded", "timeout", "serialization", "internal"] },
+        "message": { "type": "string" },
+        "offset": { "type": "string", "pattern": "^0x[0-9a-f]+$" }
+      }
+    }
+  }
+}

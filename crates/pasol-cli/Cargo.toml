@@ -1,0 +1,33 @@
+[package]
+name = "pasol-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+publish = false
+
+[[bin]]
+name = "pasol"
+path = "src/main.rs"
+
+[dependencies]
+clap.workspace = true
+pasol-parser-core = { path = "../parser-core" }
+pasol-pe-parser = { path = "../pe-parser" }
+serde_json.workspace = true
+tempfile = "3.20"
+wait-timeout.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+win32job = "2.0.3"
+
+[target.'cfg(unix)'.dependencies]
+rlimit = "0.11"
+
+[dev-dependencies]
+pasol-parser-sdk = { path = "../parser-sdk" }
+
+[lints]
+workspace = true

@@ -1,0 +1,8 @@
+Pasol Parser
+Copyright 2026 PasolSecurity contributors
+
+This product includes software developed by PasolSecurity contributors.
+
+Third-party dependencies and their licenses are recorded by Cargo metadata and
+the corresponding upstream distributions. No third-party code is copied into
+this repository.

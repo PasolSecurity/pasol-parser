@@ -1,0 +1,28 @@
+[package]
+name = "pasol-pe-parser"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+goblin.workspace = true
+hex.workspace = true
+pasol-parser-core = { path = "../parser-core" }
+schemars.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+pasol-parser-sdk = { path = "../parser-sdk" }
+
+[[bench]]
+name = "parse_pe"
+harness = false
+
+[lints]
+workspace = true

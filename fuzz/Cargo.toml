@@ -1,0 +1,22 @@
+[package]
+name = "pasol-parser-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+pasol-parser-core = { path = "../crates/parser-core" }
+pasol-pe-parser = { path = "../crates/pe-parser" }
+
+[[bin]]
+name = "pe_parse"
+path = "fuzz_targets/pe_parse.rs"
+test = false
+doc = false
+bench = false
+
+[workspace]

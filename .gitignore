@@ -1,0 +1,7 @@
+/target/
+/fuzz/target/
+*.profraw
+*.profdata
+.idea/
+.vscode/
+
